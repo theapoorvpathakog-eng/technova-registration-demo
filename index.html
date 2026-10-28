@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A responsive student registration form demo built for KaushalProof skill evaluation.">
+  <title>TechNova 2026 | Student Registration</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="TechNova home">
+      <span class="brand-mark" aria-hidden="true">TN</span>
+      <span>TechNova <span class="brand-year">2026</span></span>
+    </a>
+    <span class="header-tag">Student Innovation Summit</span>
+  </header>
+
+  <main class="page-shell">
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow">REGISTRATION IS OPEN</p>
+      <h1 id="page-title">Build what’s next.</h1>
+      <p class="intro-copy">Join students, makers, and curious minds for a day of practical workshops, project showcases, and new ideas.</p>
+      <div class="event-facts" aria-label="Event details">
+        <div><span class="fact-icon" aria-hidden="true">◷</span><span><strong>One-day event</strong><small>10:00 AM – 4:00 PM</small></span></div>
+        <div><span class="fact-icon" aria-hidden="true">⌖</span><span><strong>Campus Innovation Hall</strong><small>Kanpur, Uttar Pradesh</small></span></div>
+      </div>
+      <div class="note-card">
+        <span class="note-symbol" aria-hidden="true">✦</span>
+        <p><strong>Bring an idea. Leave with momentum.</strong><br>Choose a session and reserve your place. This is a demo registration form; it does not send data to a server.</p>
+      </div>
+    </section>
+
+    <section class="form-card" aria-labelledby="form-title">
+      <div class="form-heading">
+        <div>
+          <p class="eyebrow">YOUR NEXT STEP</p>
+          <h2 id="form-title">Register for TechNova</h2>
+          <p class="muted">Fields marked <span aria-hidden="true">*</span> are required.</p>
+        </div>
+        <span class="step-badge">01 / 01</span>
+      </div>
+
+      <form id="registration-form" novalidate>
+        <div class="field">
+          <label for="full-name">Full name <span aria-hidden="true">*</span></label>
+          <input id="full-name" name="fullName" type="text" autocomplete="name" placeholder="e.g. Aditi Sharma" required minlength="2" maxlength="80">
+          <small class="field-error" id="name-error"></small>
+        </div>
+
+        <div class="field">
+          <label for="email">College email <span aria-hidden="true">*</span></label>
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required maxlength="120">
+          <small class="field-error" id="email-error"></small>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="college">College / institution <span aria-hidden="true">*</span></label>
+            <input id="college" name="college" type="text" autocomplete="organization" placeholder="Your institution" required maxlength="120">
+            <small class="field-error" id="college-error"></small>
+          </div>
+          <div class="field">
+            <label for="year">Study year <span aria-hidden="true">*</span></label>
+            <select id="year" name="year" required>
+              <option value="">Select year</option>
+              <option value="1">First year</option>
+              <option value="2">Second year</option>
+              <option value="3">Third year</option>
+              <option value="4">Fourth year</option>
+              <option value="other">Other</option>
+            </select>
+            <small class="field-error" id="year-error"></small>
+          </div>
+        </div>
+
+        <fieldset class="session-fieldset">
+          <legend>Choose your session <span aria-hidden="true">*</span></legend>
+          <label class="session-option">
+            <input type="radio" name="session" value="Web Development Lab" required>
+            <span class="radio-copy"><strong>Web Development Lab</strong><small>Build a responsive page · Beginner friendly</small></span>
+            <span class="session-time">10:30 AM</span>
+          </label>
+          <label class="session-option">
+            <input type="radio" name="session" value="AI for Everyday Projects">
+            <span class="radio-copy"><strong>AI for Everyday Projects</strong><small>Turn a problem into a prototype</small></span>
+            <span class="session-time">12:00 PM</span>
+          </label>
+          <label class="session-option">
+            <input type="radio" name="session" value="Student Project Showcase">
+            <span class="radio-copy"><strong>Student Project Showcase</strong><small>Share ideas and learn from peers</small></span>
+            <span class="session-time">2:00 PM</span>
+          </label>
+          <small class="field-error" id="session-error"></small>
+        </fieldset>
+
+        <label class="consent-row" for="consent">
+          <input id="consent" name="consent" type="checkbox" required>
+          <span>I confirm these details are correct and agree to be contacted about this demo event. <span aria-hidden="true">*</span></span>
+        </label>
+        <small class="field-error" id="consent-error"></small>
+
+        <button class="submit-button" type="submit">Complete registration <span aria-hidden="true">→</span></button>
+        <p class="privacy-note"><span aria-hidden="true">🔒</span> Demo only — details stay in this browser and are not uploaded.</p>
+        <div id="form-message" class="form-message" role="status" aria-live="polite" tabindex="-1" hidden></div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>TechNova 2026 · Student Innovation Summit</span>
+    <span>Demo project created for KaushalProof evaluation</span>
+  </footer>
+</body>
+</html>
